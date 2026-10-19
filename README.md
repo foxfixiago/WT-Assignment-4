@@ -6,7 +6,7 @@ field-wise error messages, and stores accepted records in a JSON file.
 
 **Course:** 2304362L-SV26-27 | **Assignment:** 4 | **Student:** Om Kumar Gupta (PRN: 202401040206)
 **Live URL:** (https://wt-assignment-4.onrender.com/)
-**GitHub:** (add your repository link here)
+**GitHub:** (https://github.com/foxfixiago/WT-Assignment-4)
 
 ## Why this is server-side validation
 
