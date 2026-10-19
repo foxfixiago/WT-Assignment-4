@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Registration Portal – ExpressJS Validation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Student Registration Portal</h1>
+  <p>Built with ExpressJS. Every registration is validated on the server using express-validator.</p>
+</header>
+
+<main>
+  <section aria-labelledby="addH">
+    <h2 id="addH">Register student</h2>
+    <form id="form" novalidate>
+      <label for="name">Full name</label>
+      <input id="name" placeholder="e.g. Om Gupta" autocomplete="off">
+      <div class="err" id="e-name"></div>
+
+      <label for="email">Email</label>
+      <input id="email" placeholder="e.g. om@example.com" autocomplete="off">
+      <div class="err" id="e-email"></div>
+
+      <label for="mobile">Mobile number</label>
+      <input id="mobile" inputmode="numeric" placeholder="10-digit number" autocomplete="off">
+      <div class="err" id="e-mobile"></div>
+
+      <label for="age">Age</label>
+      <input id="age" inputmode="numeric" placeholder="e.g. 20" autocomplete="off">
+      <div class="err" id="e-age"></div>
+
+      <label for="course">Course</label>
+      <select id="course">
+        <option value="">Select…</option>
+        <option>Computer Engineering</option><option>IT</option><option>Mechanical</option><option>Electronics</option><option>Civil</option>
+      </select>
+      <div class="err" id="e-course"></div>
+
+      <label for="city">City (optional)</label>
+      <input id="city" placeholder="e.g. Pune" autocomplete="off">
+      <div class="err" id="e-city"></div>
+
+      <button type="submit">Register</button>
+      <div id="banner" role="status"></div>
+    </form>
+  </section>
+
+  <section aria-labelledby="listH">
+    <h2 id="listH">Registered students</h2>
+    <div class="stats">
+      <div class="stat"><b id="s-count">0</b><span>Students</span></div>
+      <div class="stat"><b id="s-avg">–</b><span>Average age</span></div>
+      <div class="stat"><b id="s-top">–</b><span>Top course</span></div>
+    </div>
+    <div class="tools">
+      <input id="search" placeholder="Search name or email…" aria-label="Search">
+      <select id="filter" aria-label="Filter course">
+        <option value="">All courses</option>
+        <option>Computer Engineering</option><option>IT</option><option>Mechanical</option><option>Electronics</option><option>Civil</option>
+      </select>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Name</th><th>Email</th><th>Mobile</th><th>Course</th><th></th></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty" hidden>No students match. Register one or clear the filters.</div>
+  </section>
+
+  <section class="wide">
+    <h2>Stored data (JSON array from the server)</h2>
+    <pre id="json"></pre>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
