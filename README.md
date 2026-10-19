@@ -4,7 +4,7 @@ A web application built with **Express.js** and **express-validator** that demon
 The browser only sends raw form input. The server validates every request, rejects invalid data with HTTP 400 and
 field-wise error messages, and stores accepted records in a JSON file.
 
-**Course:** 2304362L-SV26-27 | **Assignment:** 4 | **Student:** Om Gupta (PRN: ________)
+**Course:** 2304362L-SV26-27 | **Assignment:** 4 | **Student:** Om Kumar Gupta (PRN: 202401040206)
 **Live URL:** (add your deployed link here)
 **GitHub:** (add your repository link here)
 
